@@ -1,0 +1,8 @@
+<h2>Top Heroes</h2>
+<div>
+    <button *ngFor="let hero of heroes" mat-raised-button (click)="openDialog(hero)">
+        {{hero.name}}
+    </button>
+</div>
+
+<app-hero-search></app-hero-search>
