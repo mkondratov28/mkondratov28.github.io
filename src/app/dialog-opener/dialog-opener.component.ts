@@ -17,12 +17,9 @@ export class DialogOpenerComponent implements OnInit {
 
   openDialog(hero: Hero): void {
     const dialogRef = this.dialog.open(HeroDetailComponent, {
-      height: '400px',
+      height: '240px',
       width: '400px',
-      data: {
-        id: hero.id,
-        name: hero.name
-      },
+      data: hero,
     })
     console.log(hero);
   }
