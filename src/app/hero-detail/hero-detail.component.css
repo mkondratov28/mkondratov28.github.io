@@ -32,7 +32,8 @@ button:disabled {
 .save {
     margin: .2em;
     background-color: #eee;
-    padding: 0.5rem;
+    color: black;
+    padding: 0.25rem;
     border-radius: 6px;
     font-size: 1rem;
 }
