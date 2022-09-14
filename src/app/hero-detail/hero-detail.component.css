@@ -1,5 +1,13 @@
 /* HeroDetailComponent's private CSS styles */
 
+.li {
+    list-style-type: none;
+}
+
+.ul {
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+}
 
 label {
     color: #ffffff;
@@ -8,15 +16,7 @@ label {
 input {
     font-size: 1em;
     padding: .5rem;
-}
-
-button {
-    margin-top: 20px;
-    margin-right: .5rem;
-    background-color: #eee;
-    padding: 1rem;
-    border-radius: 4px;
-    font-size: 1rem;
+    width: 40%;
 }
 
 button:hover {
@@ -27,4 +27,12 @@ button:disabled {
     background-color: #eee;
     color: #ccc;
     cursor: auto;
+}
+
+.save {
+    margin: .2em;
+    background-color: #eee;
+    padding: 0.5rem;
+    border-radius: 6px;
+    font-size: 1rem;
 }

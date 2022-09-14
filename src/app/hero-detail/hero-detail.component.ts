@@ -2,7 +2,7 @@ import { Component, OnInit, Input, Inject } from '@angular/core';
 import { Hero } from '../hero';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
-import { MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 import { HeroService } from '../hero.service';
 
@@ -21,7 +21,8 @@ export class HeroDetailComponent implements OnInit {
     @Inject(MAT_DIALOG_DATA) public data: {
       id: number,
       name: string
-    }
+    },
+    public dialogRef: MatDialogRef<HeroDetailComponent>,
   ) { }
 
   ngOnInit(): void {
@@ -36,7 +37,10 @@ export class HeroDetailComponent implements OnInit {
 
   getDialog(): void {
     this.hero = this.data
+  }
 
+  closeDialog(): void {
+    this.dialogRef.close();
   }
 
   goBack(): void {
@@ -45,7 +49,7 @@ export class HeroDetailComponent implements OnInit {
 
   save(): void {
     if (this.hero) {
-      this.heroService.updateHero(this.hero).subscribe(() => this.goBack());
+      this.heroService.updateHero(this.hero).subscribe(() => this.closeDialog());
     }
   }
 

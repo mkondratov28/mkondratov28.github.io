@@ -18,6 +18,7 @@ import { MatSliderModule } from '@angular/material/slider';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDialogModule } from '@angular/material/dialog';
 import { DialogOpenerComponent } from './dialog-opener/dialog-opener.component';
+import { MatList, MatListModule } from '@angular/material/list';
 
 
 @NgModule({
@@ -47,6 +48,8 @@ import { DialogOpenerComponent } from './dialog-opener/dialog-opener.component';
     MatSliderModule,
     MatIconModule,
     MatDialogModule,
+    MatListModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

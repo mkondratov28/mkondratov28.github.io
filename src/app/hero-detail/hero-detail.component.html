@@ -1,14 +1,16 @@
-<h1> Die deteilreichsten Details der Heroes</h1>
 <div *ngIf="hero">
-    <h2>{{hero.name | uppercase}} Details</h2>
-    <div><span>id: </span>{{hero.id}}</div>
-    <div>
-        <label for="hero-name">Hero name: </label>
-        <input id="hero-name" [(ngModel)]="hero.name" placeholder="name">
-    </div>
+    <h1 class="header">{{hero.name | uppercase}} Details</h1>
+    <mat-list role="list" class="ul">
+        <mat-list-item role="listitem" class="li">
+            <div><span>ID: </span>{{hero.id}}</div>
+        </mat-list-item>
+        <mat-list-item role="listitem" class="li">
+            <div>
+                <label for="hero-name">Hero name: </label>
+                <input id="hero-name" [(ngModel)]="hero.name" placeholder="name">
+                <button class="save" type="button" (click)="save()">save!</button>
+            </div>
+        </mat-list-item>
+    </mat-list>
+
 </div>
-<button type="button" (click)="goBack()">go back!</button>
-<button type="button" (click)="save()">save!</button>
-<button type="button" (click)="goBack()">go back!</button>
-<button type="button" (click)="save()">save!</button>
-Hallo Welt <3 Ich bin im Develop-Branch :O
