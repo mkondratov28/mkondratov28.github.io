@@ -1,9 +1,11 @@
 <h1>
     <div>{{title}}</div>
 </h1>
-<nav>
-    <a mat-button routerLink="/dashboard">Dashboard</a>
-    <a mat-button routerLink="/heroes">Heroes</a>
-</nav>
-<router-outlet class="background"></router-outlet>
-<app-messages></app-messages>
+<div class="background">
+    <nav>
+        <a mat-button routerLink="/dashboard">Dashboard</a>
+        <a mat-button routerLink="/heroes">Heroes</a>
+    </nav>
+    <router-outlet></router-outlet>
+    <app-messages></app-messages>
+</div>
