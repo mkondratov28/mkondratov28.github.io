@@ -9,10 +9,14 @@
 }
 
 .add-hero input {
-    margin-bottom: 2%;
-    padding: .5rem;
+
+    margin-bottom: 7%;
+    padding: .625rem;
     margin-left: 20%;
     width: 100%;
+    color: white;
+    background-color: rgb(241, 171, 241);
+    border: 0;
 }
 
 .add-hero button {
