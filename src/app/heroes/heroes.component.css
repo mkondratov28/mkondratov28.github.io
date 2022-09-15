@@ -1,11 +1,25 @@
 /* HeroesComponent's private CSS styles */
 
-input {
-    display: block;
-    width: 50%;
+.add-hero {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    width: 35%;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.add-hero input {
+    margin-left: 5%;
+    margin-bottom: 2%;
     padding: .5rem;
-    margin: 1rem 0;
-    box-sizing: border-box;
+}
+
+.add-hero button {
+    padding: .4rem 1.2rem;
+    margin-left: 5%;
+    font-size: 1rem;
 }
 
 .heroes {
@@ -87,12 +101,6 @@ button.delete:hover {
     text-align: right;
     margin-right: .8em;
     border-radius: 4px 0 0 4px;
-}
-
-.add-button {
-    padding: .5rem 1.5rem;
-    font-size: 1rem;
-    margin-bottom: 2rem;
 }
 
 .add-button:hover {
