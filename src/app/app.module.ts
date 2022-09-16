@@ -19,6 +19,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatDialogModule } from '@angular/material/dialog';
 import { DialogOpenerComponent } from './dialog-opener/dialog-opener.component';
 import { MatList, MatListModule } from '@angular/material/list';
+import { NavigationComponent } from './navigation/navigation.component';
 
 
 @NgModule({
@@ -30,6 +31,7 @@ import { MatList, MatListModule } from '@angular/material/list';
     DashboardComponent,
     HeroSearchComponent,
     DialogOpenerComponent,
+    NavigationComponent,
   ],
   imports: [
     BrowserModule,
