@@ -1,11 +1,36 @@
-.example-label {
+.img1 {
+    margin-left: 20px;
+}
+
+.img2 {
+    margin-left: 20px;
+}
+
+.img3 {
+    margin-left: 20px;
+}
+
+.img4 {
+    margin-left: 20px;
+}
+
+.button {
+    margin-left: 60px;
+    margin-right: 52px;
+}
+
+
+
+
+
+/* .example-label {
     display: table-cell;
     font-size: 14px;
     margin-left: 8px;
     min-width: 120px;
-}
+} */
 
-.example-button-row {
+/* .example-button-row {
     display: table-cell;
     width: 490px;
-}
+} */
