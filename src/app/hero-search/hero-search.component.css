@@ -1,23 +1,23 @@
 /* HeroSearch private styles */
 
-label {
-    display: block;
-    font-weight: bold;
-    font-size: 1.2rem;
-    margin-top: 1rem;
-    margin-bottom: .5rem;
-
+.sc {
+    display: flex;
+    margin-bottom: -1em;
 }
 
-input {
+.sc .ic {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: .5rem;
+}
+
+.sc .sb {
     padding: .5rem;
-    width: 100%;
+    margin-top: auto;
     max-width: 600px;
-    box-sizing: border-box;
-    display: block;
 }
 
-input:focus {
+.sc .sb:focus {
     outline: #336699 auto 1px;
 }
 
