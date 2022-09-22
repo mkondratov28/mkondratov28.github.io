@@ -6,20 +6,10 @@
     <h2>Die bestesten Topheroes allerzeiten!!</h2>
 
     <div>
-        <img class="img1" src="assets/image/bombasto.png" height="200" width="180">
-        <img class="img2" src="assets/image/celeritas.png" height="200" width="180">
-        <img class="img3" src="assets/image/magenta.png" height="200" width="180">
-        <img class="img4" src="assets/image/rubberman.png" height="200" width="180">
-
-    </div>
-
-
-    <div>
-        <button class="button" *ngFor="let hero of heroes" mat-raised-button (click)="openDialog(hero)">
-            {{hero.name}}
+        <button mat-raised-button class="button" *ngFor="let hero of heroes"><img src="assets/image/{{hero.name}}.png"
+                height="400" width="360" (click)="openDialog(hero)">
         </button>
     </div>
-
 
 </body>
 
