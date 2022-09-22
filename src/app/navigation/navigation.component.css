@@ -2,6 +2,12 @@
     background-color: rgb(46, 42, 60);
     color: rgb(255, 255, 255);
     display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nvg a.link {
+    font-size: 1.1rem;
 }
 
 .nvg a.link:hover {
@@ -11,9 +17,7 @@
 
 .nvg app-hero-search.search {
     margin-left: auto;
-    margin-right: 5%;
-}
-
-.search-result {
-    /*/ads*/
+    margin-right: 3%;
+    margin-top: .4rem;
+    margin-bottom: .4rem;
 }

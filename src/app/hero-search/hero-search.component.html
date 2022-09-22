@@ -1,10 +1,12 @@
-<div id="search-component">
-    <label for="search-box">Hero Search:</label>
-    <input #searchBox id="search-box" (input)="search(searchBox.value)" />
+<div>
+    <div class="sc">
+        <mat-icon class="ic">search</mat-icon>
+        <input #searchBox id="search-box" class="sb" (input)="search(searchBox.value)" />
+    </div>
 
-    <ul class="search-result">
-        <li *ngFor="let hero of heroes$ | async">
-            <button (click)="openDialog(hero)">{{hero.name}}</button>
-        </li>
-    </ul>
+    <mat-list role="list" class="search-result">
+        <mat-list-item role="listitem" class="result-list" *ngFor="let hero of heroes$ | async">
+            <button (click)="openDialog(hero)" class="result-item">{{hero.name}}</button>
+        </mat-list-item>
+    </mat-list>
 </div>
