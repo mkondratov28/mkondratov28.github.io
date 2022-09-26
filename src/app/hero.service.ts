@@ -56,7 +56,10 @@ export class HeroService {
       .pipe(tap((newHero: Hero) => this.log(`added hero w/ id=${newHero.id}`)),
         catchError(this.handleError<Hero>('addHero'))
       );
+
+
   }
+
 
   /** DELETE: delete the hero from the server */
   deleteHero(id: number): Observable<Hero> {
@@ -67,6 +70,9 @@ export class HeroService {
       catchError(this.handleError<Hero>('deleteHero'))
     );
   }
+
+
+
 
   /* GET heroes whose name contains search term */
   searchHeroes(term: string): Observable<Hero[]> {
