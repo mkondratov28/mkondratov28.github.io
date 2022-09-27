@@ -24,9 +24,8 @@ export class StorageService {
         }
       );
     }
-    return temp;
+    return this.sortHeroes(temp);
   }
-
 
   ngOnInit() {
     if (this.heroes.length == 0 && this.deleted == false) {
@@ -43,7 +42,6 @@ export class StorageService {
     this.heroes.setItem(String(this.genId()), name);
   }
 
-
   deleteHero(id: number) {
     if (this.heroes.length == 1) this.deleted = true;
     this.heroes.removeItem(String(id));
@@ -55,8 +53,11 @@ export class StorageService {
   }
 
   sortHeroes(heroes: Hero[]): Hero[] {
-    let sortedHeroes = heroes.sort((n1, n2) => n1.id - n2.id);
-    return sortedHeroes;
+    return heroes.sort((n1, n2) => n1.id - n2.id);;
+  }
+
+  updateHero(hero: Hero): any {
+    this.heroes.setItem(String(hero.id), hero.name);
   }
 
 
