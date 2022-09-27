@@ -1,24 +1,28 @@
 <h2>My Heroes</h2>
-<div class="add-hero">
-    <!-- <label for="new-hero">Hero name: </label> -->
-    <input id="new-hero" placeholder="add a new hero" #heroName />
+<div class="heroes">
+    <div class="add-hero">
+        <!-- <label for="new-hero">Hero name: </label> -->
+        <input id="new-hero" placeholder="add a new hero" #heroName maxlength="30" />
 
-    <!-- (click) passes input value to add() and then clears the input -->
-    <button mat-icon-button type="button" (click)="add(heroName.value); heroName.value=''">
-        <mat-icon>add</mat-icon>
-    </button>
-</div>
-<ul class="heroes">
-    <li *ngFor="let hero of heroes">
-        <div class="lineContainer">
-            <button mat-raised-button (click)="openDialog(hero)" class="dialog"><span class="badge">{{hero.id}}</span>
-                {{hero.name}}</button>
-            <button mat-icon-button type="button" class="delete" title="delete hero" (click)="delete(hero)">
-                <mat-icon>delete</mat-icon>
-            </button>
-        </div>
-    </li>
-</ul>
-<div>
-    <button mat-raised-button type="button" class="reset" (click)="reset()">reset heroes</button>
+        <!-- (click) passes input value to add() and then clears the input -->
+        <button mat-icon-button type="button" class="io-button" (click)="add(heroName.value); heroName.value=''">
+            <mat-icon>add</mat-icon>
+        </button>
+    </div>
+    <ul class="heroes-list">
+        <li *ngFor="let hero of heroes">
+            <div class="heroes-list-item">
+                <button mat-raised-button (click)="openDialog(hero)" class="hero"><span class="badge">{{hero.id}}</span>
+                    {{hero.name}}</button>
+                <button mat-icon-button type="button" class="io-button" title="delete hero" (click)="delete(hero)">
+                    <mat-icon>
+                        delete_outline
+                    </mat-icon>
+                </button>
+            </div>
+        </li>
+    </ul>
+    <div class="reset">
+        <button mat-raised-button type="button" class="reset" (click)="reset()">reset heroes</button>
+    </div>
 </div>

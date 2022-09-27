@@ -1,74 +1,70 @@
 /* HeroesComponent's private CSS styles */
 
+.heroes {
+    display: block;
+    position: relative;
+    left: 2.7rem;
+}
+
 .add-hero {
-    width: 15em;
+    width: 25em;
     display: inline-flex;
     flex-direction: row;
     align-items: flex-start;
     justify-content: space-between;
 }
 
-.add-hero input {
-
+#new-hero {
     margin-bottom: 7%;
     padding: .625rem;
-    margin-left: 20%;
     width: 100%;
     color: white;
     background-color: rgb(241, 171, 241);
-    border: 0;
+    border-radius: .2rem;
+    border-color: #8d8d8d;
+    border-style: dashed;
 }
 
-.add-hero button {
+.io-button {
     background-color: rgb(181, 178, 180);
-    margin-left: -10%;
+    margin-left: -8%;
 }
 
-.add-hero button.hover {
+.io-button:hover {
     background-color: rgb(226, 226, 226);
 }
 
-.heroes {
+.heroes-list {
     margin: 0 0 2em 0;
     list-style-type: none;
     padding: 0;
-    width: 15em;
+    width: 25em;
 }
 
 
-.heroes li {
+.heroes-list li {
     position: relative;
     cursor: pointer;
 }
 
 
-.heroes li:hover {
+.heroes-list li:hover {
     left: .1em;
 }
 
-.lineContainer {
+.heroes-list-item {
     display: flex;
     align-items: center;
     outline-color: black;
     outline-width: 10px;
 }
 
-.heroes button.dialog {
+.heroes-list button.hero {
     background-color: rgb(241, 171, 241);
     width: 100%;
-    margin-left: 20%;
 }
 
-.heroes button.dialog:hover {
+.heroes-list button.hero:hover {
     color: #2c3a41;
     background-color: #ffc1fd;
-}
-
-button.delete {
-    background-color: rgb(181, 178, 180);
-    margin-left: -10%;
-}
-
-button.delete:hover {
-    background-color: rgb(226, 226, 226);
 }
