@@ -73,7 +73,7 @@ export class HeroesComponent implements OnInit {
 
   reset() {
     this.storageService.resetHeroes();
-
+    this.getHeroes();
   }
 
 
