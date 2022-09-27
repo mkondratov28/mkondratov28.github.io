@@ -2,6 +2,7 @@
 
 .li {
     list-style-type: none;
+
 }
 
 .ul {
@@ -17,6 +18,7 @@ input {
     font-size: 1em;
     padding: .5rem;
     width: 40%;
+
 }
 
 button:hover {
@@ -30,7 +32,9 @@ button:disabled {
 }
 
 .save {
-    margin: .2em;
+    /* margin-top: 2px; */
+    /* margin-left: 1px;
+    margin: .2em; */
     background-color: #eee;
     color: black;
     padding: 0.25rem;
