@@ -1,11 +1,20 @@
+/* Hintergrund/Rahmen der Bilder */
+
 .button {
-    margin-left: 1%;
-    margin-right: 1%;
+    margin-left: 2%;
+    margin-right: 2%;
     margin-top: 2%;
-    background-color: gold;
+    margin-bottom: 2%;
+    flex-wrap: wrap;
+    background-color: rgb(98, 95, 255);
+    padding: 0.5%;
 }
 
+/* Hintergrund Dashboard */
+body {
 
+    flex-flow: column;
+}
 
 
 
