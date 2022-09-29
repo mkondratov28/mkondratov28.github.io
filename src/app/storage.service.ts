@@ -9,22 +9,23 @@ import { HEROES } from './mock-heroes';
 })
 export class StorageService {
   heroes = localStorage;
+  temp: Hero[] = [];
 
   deleted: boolean = false;
 
   constructor() { }
 
   getHeroes(): Hero[] {
-    let temp: Hero[] = [];
+    this.temp = [];
     for (let i: number = 0; i < this.heroes.length; i++) {
-      temp.push(
+      this.temp.push(
         {
           id: Number(this.heroes.key(i)),
           name: String(this.heroes.getItem(String(this.heroes.key(i))))
         }
       );
     }
-    return this.sortHeroes(temp);
+    return this.sortHeroes(this.temp);
   }
 
   ngOnInit() {
@@ -60,6 +61,19 @@ export class StorageService {
     this.heroes.setItem(String(hero.id), hero.name);
   }
 
+  searchHeroes(term: string): Hero[] {
+    let searchResult: Hero[] = [];
+    if (!term.trim()) {
+      return [];
+    } else {
+      for (let i = 0; i < this.heroes.length; i++) {
+        if (this.temp[i].name.toLowerCase().includes(term.toLowerCase())) {
+          searchResult.push(this.temp[i]);
+        }
+      }
+      return searchResult;
+    }
+  }
 
 
   //copied from in-memory-data.service.ts:

@@ -5,7 +5,7 @@
     </div>
 
     <mat-list role="list" class="search-result">
-        <mat-list-item role="listitem" class="result-list" *ngFor="let hero of heroes$ | async">
+        <mat-list-item role="listitem" class="result-list" *ngFor="let hero of heroes">
             <button (click)="openDialog(hero)" class="result-item">{{hero.name}}</button>
         </mat-list-item>
     </mat-list>
