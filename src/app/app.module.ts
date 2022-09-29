@@ -20,6 +20,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { DialogOpenerComponent } from './dialog-opener/dialog-opener.component';
 import { MatList, MatListModule } from '@angular/material/list';
 import { NavigationComponent } from './navigation/navigation.component';
+import { HeroLeasingComponent } from './hero-leasing/hero-leasing.component';
 
 
 @NgModule({
@@ -32,6 +33,7 @@ import { NavigationComponent } from './navigation/navigation.component';
     HeroSearchComponent,
     DialogOpenerComponent,
     NavigationComponent,
+    HeroLeasingComponent,
   ],
   imports: [
     BrowserModule,
