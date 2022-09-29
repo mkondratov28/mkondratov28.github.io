@@ -1,41 +1,20 @@
 <div *ngIf="hero">
 
     <h1 class="header">{{hero.name | uppercase}} Details</h1>
-    <img src="assets/image/{{hero.id}}.png" width="150" height="150">
+    <img src="assets/image/{{hero.id}}.png" width="45%" height="45%" alt="Photo of a hero" style="float:left">
+    <mat-list role="list" class="ul">
 
-    <span>ID: </span>{{hero.id}}
+        <mat-list-item role="listitem" class="li">
+            <span>ID: </span>{{hero.id}}
+        </mat-list-item>
 
-
-    <label for="hero-name">Hero name: </label>
-    <input id="hero-name" [(ngModel)]="hero.name" placeholder="name">
-
-    <button mat-raised-button class="save" (click)="save()">save!</button>
-
-
-
-</div>
-
-
-
-
-<!-- <div *ngIf="hero">
-
-    <h1 class="header">{{hero.name | uppercase}} Details</h1>
-    <img src="assets/image/{{hero.id}}.png" width="150" height="150">
-        <mat-list role="list" class="ul">
-            <mat-list-item role="listitem" class="li">
-                <span>ID: </span>{{hero.id}}
-            </mat-list-item>
-            <mat-list-item role="listitem" class="li">
-                <div>
-
+        <mat-list-item role="listitem" class="li">
+            <div>
                 <label for="hero-name">Hero name: </label>
                 <input id="hero-name" [(ngModel)]="hero.name" placeholder="name">
-
                 <button mat-raised-button class="save" (click)="save()">save!</button>
-                </div>
-            </mat-list-item>
-        </mat-list>
- 
+            </div>
+        </mat-list-item>
+    </mat-list>
 
-</div> -->
+</div>
