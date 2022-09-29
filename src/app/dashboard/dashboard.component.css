@@ -16,7 +16,11 @@ body {
     flex-flow: column;
 }
 
-
+.top-heroes {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
 
 
 /* .example-label {
