@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { LeasedHero } from '../leasedHero';
+import { Hero } from '../hero';
+import { StorageService } from '../storage.service';
 
 @Component({
   selector: 'app-hero-leasing',
@@ -7,10 +8,19 @@ import { LeasedHero } from '../leasedHero';
   styleUrls: ['./hero-leasing.component.css']
 })
 export class HeroLeasingComponent implements OnInit {
+  heroes: Hero[] = [];
 
-  constructor() { }
+  constructor(private storageService: StorageService) { }
 
   ngOnInit(): void {
+  }
+
+  getHeroes() {
+    let heroes = this.storageService.getHeroes();
+  }
+
+  lease() {
+
   }
 
 }
